@@ -20,10 +20,12 @@ def read_prompt_from_file(file_path: str) -> str:
 
 # Example usage
 if __name__ == "__main__":
+    # A sample topic 
     topic = "What is React JS "
     prompt = read_prompt_from_file("prompt.txt")
     result = get_openai_response(prompt, topic)
-
+    # Add your video file here that will run on background
+    
     BASE_VIDEO_FILE = "base_video.mp4"
     baseVideoFile = VideoFileClip(BASE_VIDEO_FILE)
     text_clips = []
