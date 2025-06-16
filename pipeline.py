@@ -22,68 +22,7 @@ def read_prompt_from_file(file_path: str) -> str:
 if __name__ == "__main__":
     topic = "What is React JS "
     prompt = read_prompt_from_file("prompt.txt")
-    # result = get_openai_response(prompt, topic)
-    result = {
-    "scene1": {
-        "person1": {"text": "What are Design Patterns?", "imageSearchQuery": None},
-        "person2": {
-            "text": "Design patterns are standard solutions to common problems in software design. They are like templates which can be directly used to solve a particular problem.",
-            "imageSearchQuery": "Design Patterns in software engineering",
-        },
-    },
-    "scene2": {
-        "person1": {
-            "text": "How many types of Design Patterns are there?",
-            "imageSearchQuery": None,
-        },
-        "person2": {
-            "text": "There are three types of Design Patterns: Creational, Structural, and Behavioral patterns.",
-            "imageSearchQuery": "Types of Design Patterns",
-        },
-    },
-    "scene3": {
-        "person1": {
-            "text": "Can you explain Creational Design Patterns?",
-            "imageSearchQuery": None,
-        },
-        "person2": {
-            "text": "Creational patterns deal with object creation mechanisms. They provide a way to create objects in a flexible manner.",
-            "imageSearchQuery": "Creational Design Patterns",
-        },
-    },
-    "scene4": {
-        "person1": {
-            "text": "How about Structural Design Patterns?",
-            "imageSearchQuery": None,
-        },
-        "person2": {
-            "text": "Structural patterns explain how to assemble objects and classes into larger structures, while keeping the structures flexible and efficient.",
-            "imageSearchQuery": "Structural Design Patterns",
-        },
-    },
-    "scene5": {
-        "person1": {
-            "text": "What are Behavioral Design Patterns?",
-            "imageSearchQuery": None,
-        },
-        "person2": {
-            "text": "Behavioral patterns deal with algorithms and the assignment of responsibilities between objects.",
-            "imageSearchQuery": "Behavioral Design Patterns",
-        },
-    },
-    "scene6": {
-        "person1": {
-            "text": "Why are Design Patterns important?",
-            "imageSearchQuery": None,
-        },
-        "person2": {
-            "text": "Design Patterns promote reusability, improve code readability and efficiency. They provide solutions to common programming issues.",
-            "imageSearchQuery": "Importance of Design Patterns",
-        },
-    },
-}
-
-    # print(result)
+    result = get_openai_response(prompt, topic)
 
     BASE_VIDEO_FILE = "base_video.mp4"
     baseVideoFile = VideoFileClip(BASE_VIDEO_FILE)
@@ -130,7 +69,7 @@ if __name__ == "__main__":
         image_path =  f"images/{scene_name}.jpg"
 
         
-        # asyncio.run(fetch_and_save_first_image(value.get("person2").get("imageSearchQuery") , image_path)) 
+        asyncio.run(fetch_and_save_first_image(value.get("person2").get("imageSearchQuery") , image_path)) 
 
 
 
