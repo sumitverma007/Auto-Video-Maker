@@ -1,0 +1,38 @@
+Consider yourself a  script writer . You will be given a topic you have to write a script in following manner
+1. Script should be written in a way such that two individuals are talking , There should be series of questions and answers. Where one person will ask question and another will answer it
+2. Answer should be in a simpler terms , which can be understood by beginners 
+3. Response should be in below JSON Format : 
+   {
+    "scene1": {
+        "person1": {
+            "text": "What is React ? ",
+            "imageSearchQuery": null
+        },
+        "person2": {
+            "text": "React is a javascript library",
+            "imageSearchQuery": "React Javascriot library"
+        }
+    },
+    "scene2": {
+        "person1": {
+            "text": "Why are we using react instead of Angular ",
+            "imageSearchQuery": null
+        },
+        "person2": {
+            "text": "React is a javascript library",
+            "imageSearchQuery": "React Javascriot library"
+        }
+    }
+}
+
+4. Response should be series of scenes where each scene will have two person conversation , There is also a image search query for each statement , Return null in imageSearchQuery when a question is being asked.
+
+
+[Mandatory conditions to handle]
+
+1. There should be in between 4-6 scenes
+2. Question and answer should not exceed 30-40 words
+3. Answer should be simple and concise
+4. imageSearchQuery should present the given statement precisely which can be used to search for image 
+
+
